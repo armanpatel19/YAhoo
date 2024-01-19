@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        * {
+            margin: 0px 0px;
+            padding: 0px 0px;
+            background-color: white;
+            color: black;
+            font-family: sans-serif;
+        }
+
+        .navbar svg {
+            float: right;
+            margin-right: 100px;
+            margin-top: 50px;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .logo {
+            height: 100px;
+            margin-left: 150px;
+            width: 200px;
+            background-size: cover;
+            background-image: url("data:image/png;base64,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");
+        }
+
+        .g {
+            font-size: 50px;
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .t {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .search input {
+            text-decoration: none;
+            text-decoration-line: none;
+            height: 70px;
+            width: 830px;
+            background-color: transparent;
+
+            border: rgb(194, 179, 179);
+        }
+
+        .search:hover {
+
+            box-shadow: 2px 2px rgb(198, 198, 198);
+        }
+
+        .search {
+            height: 70px;
+            width: 1000px;
+            border-radius: 50px;
+            border: 1px solid rgb(194, 179, 179);
+            text-align: center;
+            position: absolute;
+            left: 530px;
+            bottom: 500px;
+            box-shadow: 2px 2px 5px 5px rgb(247, 246, 246);
+            transition: transform 0.6s;
+        }
+
+        .i {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .mic {
+            position: absolute;
+            left: 900px;
+            bottom: 0px;
+
+
+        }
+
+        input {
+            font-size: 30px;
+        }
+
+        .btn {
+            margin-top: 200px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn button {
+            padding: 10px 20px;
+            background-color: transparent;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 900;
+            border: 1px solid rgb(194, 179, 179);
+            height: 50px;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .btn button:hover {
+            color: blue;
+            background-color: rgba(0, 30, 255, 0.196);
+        }
+
+        .trend  {
+            font-size: 30px;
+            border: 1px solid;
+            height: 500px;
+            text-align: center;
+            width: 500px;
+            border-radius: 50px;
+            position: absolute;
+            left: 800px;
+            top: 700px;
+            grid-auto-columns: max-content;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="rgba(212,220,12,1)">
+            <path
+                d="M9.98392 5.05991C11.1323 3.22236 13.1734 2 15.5 2C19.0899 2 22 4.91015 22 8.5C22 9.58031 21.7365 10.5991 21.2701 11.4955C22.3351 12.4985 23 13.9216 23 15.5C23 18.5376 20.5376 21 17.5 21H9C4.58172 21 1 17.4183 1 13C1 8.58172 4.58172 5 9 5C9.33312 5 9.66149 5.02036 9.98392 5.05991ZM12.0554 5.60419C14.0675 6.43637 15.6662 8.06578 16.4576 10.0986C16.7951 10.0339 17.1436 10 17.5 10C18.2351 10 18.9366 10.1442 19.5776 10.4059C19.8486 9.82719 20 9.18128 20 8.5C20 6.01472 17.9853 4 15.5 4C14.1177 4 12.8809 4.6233 12.0554 5.60419Z">
+            </path>
+        </svg> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+            <path
+                d="M5 10C3.9 10 3 10.9 3 12C3 13.1 3.9 14 5 14C6.1 14 7 13.1 7 12C7 10.9 6.1 10 5 10ZM19 10C17.9 10 17 10.9 17 12C17 13.1 17.9 14 19 14C20.1 14 21 13.1 21 12C21 10.9 20.1 10 19 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z">
+            </path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+            <path
+                d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM20 7.23792L12.0718 14.338L4 7.21594V19H20V7.23792ZM4.51146 5L12.0619 11.662L19.501 5H4.51146Z">
+            </path>
+        </svg>
+
+    </header>
+    <div class="logo">
+    </div>
+    <div class="g">Good afternoon!</div>
+    <div class="t">Today is January 18.</div>
+    <div class="search">
+        <input type="search" placeholder="   Search the Web">
+        <div class="i"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
+                fill="rgba(130,119,119,1)">
+                <path
+                    d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z">
+                </path>
+            </svg>
+            <div class="mic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
+                    fill="rgba(77,104,223,1)">
+                    <path
+                        d="M11.9998 1C14.7612 1 16.9998 3.23858 16.9998 6V10C16.9998 12.7614 14.7612 15 11.9998 15C9.23833 15 6.99976 12.7614 6.99976 10V6C6.99976 3.23858 9.23833 1 11.9998 1ZM3.05469 11H5.07065C5.55588 14.3923 8.47329 17 11.9998 17C15.5262 17 18.4436 14.3923 18.9289 11H20.9448C20.4837 15.1716 17.1714 18.4839 12.9998 18.9451V23H10.9998V18.9451C6.82814 18.4839 3.51584 15.1716 3.05469 11Z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="btn">
+        <a href="button"><button>cricket</button></a>
+        <a href="button"><button>movies</button></a>
+        <a href="button"><button>news</button></a>
+        <a href="button"><button>horoscope</button></a>
+    </div>
+    
+    <!-- <div class="trend">
+        <h1>Trending Now</h1>
+        <ol>
+            <li>Rahul Gandhi.</li>
+            <li>Narendra Modi.</li>
+            <li>javahar lal Nehru.</li>
+            <li>Indra Gandhi.</li>
+            <li>yasin malik.</li>
+            <li>Saksham Dubey.</li>
+            <li>Arman Patel.</li>
+            <li>Anjali Suthar.</li>
+            <li>Aayushi Bhati.</li>
+            <li>Ankita Patil.</li>
+        </ol>
+
+    </div> -->
+</body>
+
+</html>
